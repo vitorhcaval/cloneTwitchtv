@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -8,6 +9,7 @@ align-items: center;
 height: 50px;
 background-color: #18181b;
 box-shadow: 0px 3px 5px #000;
+z-index: 999;
 
 .first {
   width: 100%;
@@ -221,7 +223,7 @@ box-shadow: 0px 3px 5px #000;
   display: flex;
   align-items: center;
   height: 50px;
-  padding: 0px 0px 0px 5px;
+  margin: 0px 10px 0px 10px;
   button{
     display: flex;
     align-items: center;

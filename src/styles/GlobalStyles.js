@@ -8,5 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   scroll-behavior: smooth;
   font-family: 'Inter', sans-serif;
 }
-
+::-webkit-scrollbar{
+  display: none;
+}
 `;

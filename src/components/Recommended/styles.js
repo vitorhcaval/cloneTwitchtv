@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: relative;
-  overflow-y: auto;
-  width: 240px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #1f1f23;
+width: 240px;
+height: 100%;
+display: flex;
+flex-direction: column;
+background-color: #1f1f23;
+
   .title{
     display: flex;
     flex-direction: row;
@@ -21,8 +20,15 @@ export const Container = styled.div`
       color: #fff;
     }
     button{
+      width: 30px;
+      height: 30px;
       background-color: transparent;
       border: none;
+      cursor: pointer;
+      :hover{
+        background-color: #363639;
+        border-radius: 0.4rem;
+      }
       svg{
         color: #ffff;
         font-size: 22px;
@@ -40,7 +46,7 @@ export const Container = styled.div`
   .perfil{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 240px;
     align-items: flex-start;
     padding: 3px 10px;
     cursor: pointer;

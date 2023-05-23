@@ -1,46 +1,50 @@
 import React from 'react';
 
 import Recommended from '../../components/Recommended';
+import Slider from '../../components/Slider';
+import Channels from '../../components/Channels';
+import Categories from '../../components/Categories';
+import ShowMore from '../../components/ShowMore';
+import Directories from '../../components/Directories';
 
-import thumb from '../../assets/thumb.jpg';
-import { Container } from './styles';
-import { MdOutlineKeyboardArrowLeft as MdLeft } from 'react-icons/md';
-import { MdOutlineKeyboardArrowRight as MdRight } from 'react-icons/md';
-import { MdOutlineKeyboardArrowDown as MdDown } from 'react-icons/md';
+
+import { Container, Main } from './styles';
+import Divisor from '../../components/Divisor';
+import Footer from '../../components/Footer';
 
 function Home() {
   return (
     <Container>
       <Recommended />
-      <div>
-        <div className='slider'>
-          <div className='box'>
-            <button><MdLeft /></button>
-              <div className="featured"></div>
-              <div className="featured-1"></div>
-              <div className="featured-2"></div>
-              <div className="featured-3"></div>
-              <div className="featured-4"></div>
-            <button><MdRight /></button>
-          </div>
-        </div>
-        <div className='content'>
-          <h2><a href="#">Canais ao vivo</a><span> que achamos que você vai gostar</span></h2>
-          <div className='videos'>
-          <div className='thumb'><img src={thumb} alt="" /></div>
-          <div className='thumb'><img src={thumb} alt="" /></div>
-          <div className='thumb'><img src={thumb} alt="" /></div>
-          <div className='thumb'><img src={thumb} alt="" /></div>
-          <div className='thumb'><img src={thumb} alt="" /></div>
-          </div>
-          <div className='showMore'>
-            <div className='line'></div>
-            <button><p>Mostrar mais</p><MdDown /></button>
-            <div className='line'></div>
-          </div>
-        </div>
-      </div>
-
+      <Main>
+        <Slider />
+        <Channels
+        textLink="Canais ao vivo"
+        text="que achamos que você vai gostar"
+        />
+        <ShowMore />
+        <Categories
+        titleLink="Categorias"
+        titleText="que achamos que vai gostar"
+        />
+        <Divisor />
+        <Directories />
+        <Channels text="Em destaque" />
+        <ShowMore />
+        <Categories
+        titleText="Jogos lançados recentemente"
+        />
+        <Divisor />
+        <Channels
+        textLink="Transmissões de jogos lançados recentemente"
+        />
+        <ShowMore />
+        <Channels
+        textLink="Streamers usando Guest Star"
+        />
+        <ShowMore />
+        <Footer />
+      </Main>
     </Container>
   );
 }
